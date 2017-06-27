@@ -3,22 +3,97 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Full Stack Dating App!</title>
-	<!--Content Delivery Networks's-->
-	
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-	<link rel="stylesheet" href="style.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
+	
+	<!--Nav Bar-->
+	<div class = "row">
+		<div class = "col s12">
+			<nav>
+				<div class = "nav-wrapper">
+					<!--See if I can make a logo, like 2 Facebook F's overlayed-->
+					<a href="/" class="brand-logo">Friend Finder</a>
+					<ul id="nav-mobile" class = "right">
+						<li><a href="/survey">Survey</a></li>
+						<li><a href="api/friends">API Friends List</a></li>
+						<li><a href="">Git Hub Repo</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
 
+	<!--Main Content-->
+	<div class = "container">
+		<div class = "row">
+			<div class = "col s12">
+				<h2>Take The Test</h2>
+				<div class = "divider"></div>
 
+				<form method = "POST" id = "survey">
+					<!--
+					TO DO
+					Make a JS function to create this quiz by having an array of quesitons
+					-->
+					<div class="carousel carousel-slider center" data-indicators="true">
+						<!--Make a forward/previous buttons somehow-->
+						<div class="carousel-fixed-item center">
+					    	<a class="btn waves-effect white grey-text darken-text-2">button</a>
+					    </div>
 
+						<div class="carousel-item red white-text" href="#one!">
+					    	<h2>How much do you identify as an extrovert?</h2>
+					      	<div class="input-field col s10 offset-s1">
+								<select>
+									<option value="" disabled selected>Choose your option</option>
+									<option value="1">Option 1</option>
+									<option value="2">Option 2</option>
+									<option value="3">Option 3</option>
+									<option value="4">Option 4</option>
+									<option value="5">Option 5</option>
+								</select>
+							<label>Rating</label>
+							</div>
+						</div>
 
+						<div class="carousel-item red white-text" href="#two!">
+					    	<h2>How much do you identify as an introvert?</h2>
+					      	<div class="input-field col s10 offset-s1">
+								<select>
+									<option value="" disabled selected>Choose your option</option>
+									<option value="1">Option 1</option>
+									<option value="2">Option 2</option>
+									<option value="3">Option 3</option>
+									<option value="4">Option 4</option>
+									<option value="5">Option 5</option>
+								</select>
+							<label>Rating</label>
+							</div>
+						</div>
 
+					</div>
+				</form>
 
+			</div>
+		</div>
+	</div>
+    
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 
-	<!--jQuery/Javascript Links-->
-	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-  	<!-- Compiled and minified JavaScript of Materialize-->
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script>
+		$('.carousel.carousel-slider').carousel({fullWidth: true});
+		$('select').material_select();
+    </script>
 </body>
 </html>

@@ -3,22 +3,65 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Full Stack Dating App!</title>
-	<!--Content Delivery Networks's-->
-	
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-	<link rel="stylesheet" href="style.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
+	
+	<!--Nav Bar-->
+	<div class = "row">
+		<div class = "col s12">
+			<nav>
+				<div class = "nav-wrapper">
+					<!--See if I can make a logo, like 2 Facebook F's overlayed-->
+					<a href="#" class="brand-logo">Friend Finder</a>
+					<ul id="nav-mobile" class = "right">
+						<li><a href="/survey">Survey</a></li>
+						<li><a href="api/friends">API Friends List</a></li>
+						<li><a href="">Git Hub Repo</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
 
-
-
-
-
-
-
-	<!--jQuery/Javascript Links-->
-	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-  	<!-- Compiled and minified JavaScript of Materialize-->
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+	<!--Main Content-->
+	<div class = "container">
+		<div class = "row">
+			<div class = "col s6">
+				<h2>What this Is</h2>
+				<div class = "divider"></div>
+				<p>This website is an dating app that utilizes the following technologies:</p>
+				<h5><i class="material-icons md-18">album</i>Node.JS</h5>
+				<h5><i class="material-icons md-18">album</i>Express</h5>
+				<h5><i class="material-icons md-18">album</i>jQuery</h5>
+				<h5><i class="material-icons md-18">album</i>MySQL</h5>
+				<h5><i class="material-icons md-18">album</i>Material Design</h5>
+				<p>It is capable of pairing users based on a matching algorithm, adding users after they take a survey, and displaying results in a UI friendly way.</p>
+			</div>
+			<div class = "col s6">
+				<h2>Instructions</h2>
+				<div class = "divider"></div>
+				<p>To use this dating app, follow these three easy steps:</p>
+				<ol>
+					<li>Click the button following this list</li>
+					<li>Take the Survey that follows</li>
+					<li>Get your results!</li>
+				</ol>
+				<a href = "/survey" class="waves-effect waves-light btn-large"><i class="material-icons left">assignment</i>Take the Survey!</a>
+			</div>
+		</div>
+	</div>
+    
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 </body>
 </html>

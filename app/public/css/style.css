@@ -1,0 +1,17 @@
+nav-wrapper .brand-logo{
+	margin-left: 100px;
+}
+
+nav ul a{
+	border-left: 10px;
+	border-left-style: solid;
+	border-left-color: #000000;
+}
+
+p{
+	background-color: #555555;
+}
+
+#survey{
+	margin-top: 20px;
+}
