@@ -6,9 +6,13 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
-
+	<link rel="stylesheet" href="css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
 </head>
 
 <body>
@@ -23,8 +27,8 @@
 					<ul id="nav-mobile" class = "right">
 						<li><a href="/survey">Survey</a></li>
 						<li><a href="api/friends">API Friends List</a></li>
-						<li><a href="">Git Hub Repo</a></li>
-						<li><a href="about.html">About</a></li>
+						<li><a href="https://github.com/bjk116/Friend-Finder">Git Hub Repo</a></li>
+						<li><a href="/about">About</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -45,20 +49,17 @@
 					-->
 					<div class="carousel carousel-slider center" data-indicators="true">
 						<!--Make a forward/previous buttons somehow-->
-						<div class="carousel-fixed-item center">
-					    	<a class="btn waves-effect white grey-text darken-text-2">button</a>
-					    </div>
 
 						<div class="carousel-item red white-text" href="#one!">
 					    	<h2>How much do you identify as an extrovert?</h2>
 					      	<div class="input-field col s10 offset-s1">
-								<select>
+								<select id = "question1">
 									<option value="" disabled selected>Choose your option</option>
-									<option value="1">Option 1</option>
-									<option value="2">Option 2</option>
-									<option value="3">Option 3</option>
-									<option value="4">Option 4</option>
-									<option value="5">Option 5</option>
+									<option value="1">Not at all</option>
+									<option value="2">Somewhat Identify</option>
+									<option value="3">Moderately Identify</option>
+									<option value="4">Strongly Identify</option>
+									<option value="5">Very Strongly Identify</option>
 								</select>
 							<label>Rating</label>
 							</div>
@@ -67,13 +68,74 @@
 						<div class="carousel-item red white-text" href="#two!">
 					    	<h2>How much do you identify as an introvert?</h2>
 					      	<div class="input-field col s10 offset-s1">
-								<select>
+								<select id = "question2">
 									<option value="" disabled selected>Choose your option</option>
-									<option value="1">Option 1</option>
-									<option value="2">Option 2</option>
-									<option value="3">Option 3</option>
-									<option value="4">Option 4</option>
-									<option value="5">Option 5</option>
+									<option value="1">Not at all</option>
+									<option value="2">Somewhat Identify</option>
+									<option value="3">Moderately Identify</option>
+									<option value="4">Strongly Identify</option>
+									<option value="5">Very Strongly Identify</option>
+								</select>
+							<label>Rating</label>
+							</div>
+						</div>
+
+						<div class="carousel-item red white-text" href="#three!">
+					    	<h2>How would you rate your spontanaeity? 5 is very spontaneous, 1 is not spontaneous at all</h2>
+					      	<div class="input-field col s10 offset-s1">
+								<select id = "question3">
+									<option value="" disabled selected>Choose your option</option>
+									<option value="1">Not Spontaneous</option>
+									<option value="2">Occasionally Spontaneous</option>
+									<option value="3">Moderately Spontaneous</option>
+									<option value="4">Very Spontaneous</option>
+									<option value="5">Spontaneously Spontaneous</option>
+								</select>
+							<label>Rating</label>
+							</div>
+						</div>
+
+
+						<div class="carousel-item red white-text" href="#four!">
+					    	<h2>Where would you place yourself on the political right/left spectrum?</h2>
+					      	<div class="input-field col s10 offset-s1">
+								<select id = "question4">
+									<option value="" disabled selected>Choose your option</option>
+									<option value="1">Far Left</option>
+									<option value="2">Left</option>
+									<option value="3">Centrist</option>
+									<option value="4">Right</option>
+									<option value="5">Far Right</option>
+								</select>
+							<label>Rating</label>
+							</div>
+						</div>
+
+						<div class="carousel-item red white-text" href="#four!">
+					    	<h2>How often do you smoke tobacco products?</h2>
+					      	<div class="input-field col s10 offset-s1">
+								<select id = "question4">
+									<option value="" disabled selected>Choose your option</option>
+									<option value="1">Never</option>
+									<option value="2">Once a year</option>
+									<option value="3">Every Month</option>
+									<option value="4">Every Week</option>
+									<option value="5">Every Day</option>
+								</select>
+							<label>Rating</label>
+							</div>
+						</div>
+
+						<div class="carousel-item red white-text" href="#four!">
+					    	<h2>How often do you do drugs?</h2>
+					      	<div class="input-field col s10 offset-s1">
+								<select id = "question4">
+									<option value="" disabled selected>Choose your option</option>
+									<option value="1">Never</option>
+									<option value="2">Once a year</option>
+									<option value="3">Every Month</option>
+									<option value="4">Every Week</option>
+									<option value="5">Every Day</option>
 								</select>
 							<label>Rating</label>
 							</div>
@@ -86,10 +148,7 @@
 		</div>
 	</div>
     
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
 
     <script>
 		$('.carousel.carousel-slider').carousel({fullWidth: true});
