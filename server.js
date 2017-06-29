@@ -19,7 +19,7 @@ console.log(friends.friendsList[0]);
 
 //Handles
 var app = express();
-var port = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 
 //Express Middle-Ware
 // Sets up the Express app to handle data parsing
