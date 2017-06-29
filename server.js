@@ -27,6 +27,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+//For static stuff
+app.use(express.static(path.join(__dirname, 'app/public')));
 
 //To go in htmlRoutes.js
 app.get("/", function(req, res) {
@@ -39,14 +41,10 @@ app.get("/survey", function(req, res) {
 
 //To go in apiRoutes.js
 app.post("/api/new", function(req, res) {
-    var newReservation = req.body;
+    var newFriend = req.body;
     //If there are already 5 tables waiting
-    if (currentWaitingList.length >= 5) {
-        //push new reservation to extended waiting list
-        extendedWaitingList.push(newReservation);
-    } else {
-        currentWaitingList.push(newReservation);
-    }
+    console.log(newFriend.name);
+    friendsList.push(newFriend);
 });
 
 app.get("/api/friends", function(req, res) {

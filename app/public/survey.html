@@ -23,7 +23,7 @@
 			<nav>
 				<div class = "nav-wrapper">
 					<!--See if I can make a logo, like 2 Facebook F's overlayed-->
-					<a href="/" class="brand-logo">Friend Finder</a>
+					<a href="/" id="brand-logo">Friend Finder</a>
 					<ul id="nav-mobile" class = "right">
 						<li><a href="/survey">Survey</a></li>
 						<li><a href="api/friends">API Friends List</a></li>
@@ -39,120 +39,270 @@
 	<div class = "container">
 		<div class = "row">
 			<div class = "col s12">
+
 				<h2>Take The Test</h2>
 				<div class = "divider"></div>
 
 				<form method = "POST" id = "survey">
-					<!--
-					TO DO
-					Make a JS function to create this quiz by having an array of quesitons
-					-->
-					<div class="carousel carousel-slider center" data-indicators="true">
-						<!--Make a forward/previous buttons somehow-->
-
-						<div class="carousel-item red white-text" href="#one!">
-					    	<h2>How much do you identify as an extrovert?</h2>
-					      	<div class="input-field col s10 offset-s1">
-								<select id = "question1">
-									<option value="" disabled selected>Choose your option</option>
-									<option value="1">Not at all</option>
-									<option value="2">Somewhat Identify</option>
-									<option value="3">Moderately Identify</option>
-									<option value="4">Strongly Identify</option>
-									<option value="5">Very Strongly Identify</option>
-								</select>
-							<label>Rating</label>
-							</div>
+					<!--Name and Image URL-->
+					<div class="row" id="topOfForm">
+						<div class="input-field col s10 offset-s1">
+							<input placeholder="First Name Last Name" id="name" type="text" class="validate">
+							<label class="active" for="name">Full Name</label>
 						</div>
-
-						<div class="carousel-item red white-text" href="#two!">
-					    	<h2>How much do you identify as an introvert?</h2>
-					      	<div class="input-field col s10 offset-s1">
-								<select id = "question2">
-									<option value="" disabled selected>Choose your option</option>
-									<option value="1">Not at all</option>
-									<option value="2">Somewhat Identify</option>
-									<option value="3">Moderately Identify</option>
-									<option value="4">Strongly Identify</option>
-									<option value="5">Very Strongly Identify</option>
-								</select>
-							<label>Rating</label>
-							</div>
+						<div class="input-field col s10 offset-s1">
+							<input placeholder="Ex: https://imgur.com/um55kYb.jpg" id="imgID" type="text" class="validate">
+							<label class="active" for="imgID">Image URL</label>							
 						</div>
-
-						<div class="carousel-item red white-text" href="#three!">
-					    	<h2>How would you rate your spontanaeity? 5 is very spontaneous, 1 is not spontaneous at all</h2>
-					      	<div class="input-field col s10 offset-s1">
-								<select id = "question3">
-									<option value="" disabled selected>Choose your option</option>
-									<option value="1">Not Spontaneous</option>
-									<option value="2">Occasionally Spontaneous</option>
-									<option value="3">Moderately Spontaneous</option>
-									<option value="4">Very Spontaneous</option>
-									<option value="5">Spontaneously Spontaneous</option>
-								</select>
-							<label>Rating</label>
-							</div>
-						</div>
-
-
-						<div class="carousel-item red white-text" href="#four!">
-					    	<h2>Where would you place yourself on the political right/left spectrum?</h2>
-					      	<div class="input-field col s10 offset-s1">
-								<select id = "question4">
-									<option value="" disabled selected>Choose your option</option>
-									<option value="1">Far Left</option>
-									<option value="2">Left</option>
-									<option value="3">Centrist</option>
-									<option value="4">Right</option>
-									<option value="5">Far Right</option>
-								</select>
-							<label>Rating</label>
-							</div>
-						</div>
-
-						<div class="carousel-item red white-text" href="#four!">
-					    	<h2>How often do you smoke tobacco products?</h2>
-					      	<div class="input-field col s10 offset-s1">
-								<select id = "question4">
-									<option value="" disabled selected>Choose your option</option>
-									<option value="1">Never</option>
-									<option value="2">Once a year</option>
-									<option value="3">Every Month</option>
-									<option value="4">Every Week</option>
-									<option value="5">Every Day</option>
-								</select>
-							<label>Rating</label>
-							</div>
-						</div>
-
-						<div class="carousel-item red white-text" href="#four!">
-					    	<h2>How often do you do drugs?</h2>
-					      	<div class="input-field col s10 offset-s1">
-								<select id = "question4">
-									<option value="" disabled selected>Choose your option</option>
-									<option value="1">Never</option>
-									<option value="2">Once a year</option>
-									<option value="3">Every Month</option>
-									<option value="4">Every Week</option>
-									<option value="5">Every Day</option>
-								</select>
-							<label>Rating</label>
-							</div>
-						</div>
-
 					</div>
+					<!--Questions-->
+					<div class = "row">
+						<div class="input-field col s10 offset-s1">
+							<h4>How much do you identify as an extrovert?</h4>
+							<select id = "question1">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">Not at all</option>
+								<option value="3">Moderately Identify</option>
+								<option value="2">Somewhat Identify</option>
+								<option value="4">Strongly Identify</option>
+								<option value="5">Very Strongly Identify</option>
+							</select>
+							
+							<h4>How much do you identify as an introvert?</h4>
+							<select id = "question2">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">Not at all</option>
+								<option value="2">Somewhat Identify</option>
+								<option value="3">Moderately Identify</option>
+								<option value="4">Strongly Identify</option>
+								<option value="5">Very Strongly Identify</option>
+							</select>
+
+							<h4>How would you rate your spontanaeity?</h4>
+							<select id = "question3">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">Not Spontaneous</option>
+								<option value="2">Occasionally Spontaneous</option>
+								<option value="3">Moderately Spontaneous</option>
+								<option value="4">Very Spontaneous</option>
+								<option value="5">Spontaneously Spontaneous</option>
+							</select>
+
+							<h4>Where would you place yourself on the political right/left spectrum?</h4>
+							<select id = "question4">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">Far Left</option>
+								<option value="2">Left</option>
+								<option value="3">Centrist</option>
+								<option value="4">Right</option>
+								<option value="5">Far Right</option>
+							</select>
+
+					    	<h4>How often do you smoke tobacco products?</h4>
+							<select id = "question5">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">Never</option>
+								<option value="2">Once a year</option>
+								<option value="3">Every Month</option>
+								<option value="4">Every Week</option>
+								<option value="5">Every Day</option>
+							</select>
+
+					    	<h4>How often do you do drugs?</h4>
+							<select id = "question6">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">Never</option>
+								<option value="2">Once a year</option>
+								<option value="3">Every Month</option>
+								<option value="4">Every Week</option>
+								<option value="5">Every Day</option>
+							</select>
+						
+					    	<h4>How often do you do drink?</h4>
+							<select id = "question7">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">Never</option>
+								<option value="2">Once a year</option>
+								<option value="3">Every Month</option>
+								<option value="4">Every Week</option>
+								<option value="5">Every Day</option>
+							</select>
+
+					    	<h4>How often do you do like to work out?</h4>
+							<select id = "question8">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">Never</option>
+								<option value="2">Once a year</option>
+								<option value="3">Every Month</option>
+								<option value="4">Every Week</option>
+								<option value="5">Every Day</option>
+							</select>
+
+					    	<h4>How important is settling down/having a family for you at this point in your life?</h4>
+							<select id = "question9">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">Not at all important</option>
+								<option value="2">Somewhat important</option>
+								<option value="3">Moderatrely important</option>
+								<option value="4">Very important</option>
+								<option value="5">Incredibly important</option>
+							</select>
+
+					    	<h4>How religious are you?</h4>
+							<select id = "question10">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">Not at all religious</option>
+								<option value="2">Somewhat religious</option>
+								<option value="3">Moderatrely religious</option>
+								<option value="4">Very religious</option>
+								<option value="5">Incredibly religious</option>
+							</select>
+
+							<a href = "#" class="waves-effect waves-light btn-large" id = "submitSurvey"><i class="material-icons left">check_circle</i>Submit!</a>
+						</div>
+					</div>
+
 				</form>
+				
+				<div class = "row" id = "modalBtn">
+					<a class="waves-effect waves-light btn visible" href="#modal1">Best Match!</a>
+				</div>
+				<!-- Modal Structure -->
+				<div id="modal1" class="modal">
+					<div class="modal-content">
+						<h4>Best Match!</h4>
+						<div class = "divider"></div>
+						<h5 class = "center" id = 'bestMatchName'></h5>
+						<h5 class = "center">Match: <div id='diffScore'></div></h5>
+						<img id = "matchPic" src="">
+					</div>
+					<div class="modal-footer">
+						<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+					</div>
+				</div>
 
 			</div>
 		</div>
 	</div>
     
-
-
     <script>
-		$('.carousel.carousel-slider').carousel({fullWidth: true});
+    	//Javacsript Materialize dependences
 		$('select').material_select();
+		$('.modal').modal();
+
+		function populateModal (info, score) {
+			$('#bestMatchName').html(info.name);
+			var percentDiff = ((1 - (score/40))*100).toFixed(2); //since 20 is maximum differ ie 5-1 = 4, for 10 questions
+			$('#diffScore').html(percentDiff + '%');
+			console.log(info.photo);
+			$('#matchPic').attr('src', info.photo);
+		}
+
+		function findBestMatch (oldUsers, newUser) {
+			console.log('running find best match algo');
+			console.log('Oldies');
+			console.log(oldUsers);
+			console.log('Noob');
+			console.log(newUser);
+					//impossibly high score helps ensure first loop will be benchmark
+					var lowestScore = 100;
+					var algoMatch=[];
+
+					for (var i = 0; i < oldUsers.length; i++) {
+						//reset before going into each match
+						console.log('running first loop');
+						score = 0;
+								
+						for (var j = 0; j < oldUsers[i].scores.length; j++) {
+							console.log('running inner loop');
+							score+= Math.abs(newUser.scores[j]-oldUsers[i].scores[j]);
+						}
+			
+						if(score<lowestScore) {
+							//set new lowestScore
+							lowestScore=score;
+							//keep track of newest low score and who that bleongs to
+							console.log("Newest best match is " + oldUsers[i].name + " with score " + score);
+							algoMatch[0] = oldUsers[i];
+							algoMatch[1] = score;
+						}
+					}
+
+					return(algoMatch);
+		}
+
+		$('#submitSurvey').click(function() {
+			var answers = [];
+			var complete = true;
+			//store answers, assume test was complete
+			for (var i = 1; i <= 10; i++) {
+				var targetID = "#question"+i;
+				answers.push($(targetID).val());
+			}
+
+			//if not, give alert as to the questions needing a response, and if so say test was incomplete
+			var name = $('#name').val().trim();
+			var imageURL = $('#imgID').val().trim();
+			console.log('imgID = ' + imageURL);
+			if (name == ""){
+				Materialize.toast('Please enter your name', 4000);
+			}
+
+			if (imageURL == "") {
+				Materialize.toast('Please enter your image url!', 4000);
+			}
+
+			for(var j = 0; j < answers.length; j++) {
+				var question = j+1;
+				if (answers[j]==null) {
+					complete=false;
+					Materialize.toast('Missing Answer for Question '+question, 4000)
+				}
+			}
+
+			//if quiz completed aka no nulls, send it to the back end baby
+			if(complete){
+				var newFriend = {
+					name: name,
+					photo: imageURL,
+					scores: answers
+				};
+				console.log(newFriend);
+
+				/*
+					I M P O R T A N T
+					Use algorithm to see what existing person is closest first, before posting to backend
+					so as there is 1 less comparison and I don't have to worry about person perfectly
+					matching with him or herself
+				*/
+
+				var bestMatch =[];
+				var otherUsers;
+				$.get("/api/friends", function(data) {
+					//Algo to find best match
+					otherUsers = data;
+				}).done( function() {
+					bestMatch = findBestMatch(otherUsers, newFriend);
+
+					console.log("Best Match is : " + bestMatch[0].name);
+					//Populate Modal
+					populateModal(bestMatch[0], bestMatch[1]);
+					//'click' modal to work
+					$('#modal1').modal('open');
+					//make button to see modal visible now that we have a match
+					$('.visible').css('opacity', 1);
+					//send form information to backend baby, for now just console log it
+					$.post("/api/new", newFriend)
+	   				.done(function(data) {
+	        			console.log(data);
+	        			console.log("Adding person...");
+	      			});
+				});
+				
+
+			}
+
+		});
     </script>
 </body>
 </html>

@@ -1,21 +1,27 @@
-nav-wrapper .brand-logo{
-	margin-left: 100px;
+#topOfForm {
+	margin-top:20px;
 }
 
-nav ul a{
-	border-left: 10px;
-	border-left-style: solid;
-	border-left-color: #000000;
+#matchPic {
+	height:150px;
+	width:150px;
+	align-content: center;
 }
 
-p{
-	background-color: #555555;
+.modal-content {
+	text-align: center;
 }
 
-#survey{
-	margin-top: 20px;
+.visible{
+	opacity: 0;
 }
 
-h2 {
-	color: grey;
+#modalBtn{
+	text-align:center;
+}
+
+#brand-logo {
+	font-size: 2.5em;
+	text-decoration: underline;
+	margin-left: 20px;
 }

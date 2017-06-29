@@ -2,20 +2,20 @@
 
 var friendsList = [
 		{
-			name: "Brian",
-			photo: "www.google.com",
+			name: "Quentin",
+			photo: "http://i.imgur.com/vavfJqu.gif",
 			scores: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
 		}, {
-			name: "Haley",
-			photo: "www.yahoo.com",
+			name: "Uma",
+			photo: "http://i.imgur.com/jG0jrjW.gif",
 			scores: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 		}, {
 			name: "Kimmy",
-			photo: "www.bing.com",
+			photo: "http://i.imgur.com/babiF7K.png",
 			scores: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
 		}, {
 			name: "Titus",
-			photo: "www.facebook.com",
+			photo: "http://i.imgur.com/bmRJJFo.png",
 			scores: [2, 2, 2, 2, 2, 2, 2, 2, 2, 3]
 		}
 	];
