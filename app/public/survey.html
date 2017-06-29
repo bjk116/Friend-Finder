@@ -275,9 +275,9 @@
 					so as there is 1 less comparison and I don't have to worry about person perfectly
 					matching with him or herself
 				*/
-
 				var bestMatch =[];
 				var otherUsers;
+
 				$.get("/api/friends", function(data) {
 					//Algo to find best match
 					otherUsers = data;
@@ -298,10 +298,7 @@
 	        			console.log("Adding person...");
 	      			});
 				});
-				
-
 			}
-
 		});
     </script>
 </body>
